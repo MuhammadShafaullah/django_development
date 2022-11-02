@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Cration Form</title>
+</head>
+<body>
+    <form action="" method="POST" align="center">
+        <h1 >SignUp</h1><br><br>
+        {% csrf_token %}
+        {% if messages %}
+        {% for message in messages %}
+        {{ message}}
+        {% endfor %}
+        {% endif %}
+        <br>
+        {% for fm in form%}
+        <small class="form-label text-white"> {{ fm.label_tag}} </small>
+       {{fm}}<br>
+       
+       <br>
+        {% endfor %}
+        <input type="submit" value="submit" >
+    </form>
+</div>
+</body>
+</html>
