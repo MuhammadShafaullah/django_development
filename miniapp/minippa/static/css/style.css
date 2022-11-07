@@ -1,0 +1,35 @@
+body{
+    background-color: gray;
+    
+    
+}
+
+
+h1 {
+    
+    color: white;
+    font-family: Cinzel, serif;
+    font-size: 46px;
+   
+  }
+
+p{
+   color: white;
+   font-family: "Open Sans", sans-serif;
+   text-align: justify;
+}  
+
+.container{
+    padding: 70px 0;
+  
+}
+
+.er{
+    color : yellow;
+}
+
+.jumbocolor{
+   background-color: rgb(83,81,81);
+
+}
+  
