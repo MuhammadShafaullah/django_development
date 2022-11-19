@@ -1,0 +1,38 @@
+{% extends 'minippa/base.html' %}
+
+{% block body %}
+
+
+<div class="container">
+
+    <form action="/signin/" method="POST" novalidate>
+      {% csrf_token %}
+      <h1 align="center">SignIn</h1><br>
+      
+       
+      
+       
+      <!-- SignIn Form  -->
+      {% for fm in form%}
+      <div class="form-group">
+        {{ fm.label_tag}} {{fm}}{{fm.errors|striptags}} 
+      </div>
+      {% endfor %} 
+    
+      <input type="submit" value="Login" class="btn btn-primary">
+    </form>
+
+    <!-- for when user enter wrong uername or password in the filed -->
+    <br>{% if form.non_field_errors  %}
+      {% for error in form.non_field_errors %}
+       <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <small>{{ error }}</small> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% endfor %}
+    {% endif %}
+    </div>
+
+{% endblock body %}
