@@ -1,0 +1,22 @@
+{% extends 'minippa/base.html' %} 
+{{pw}}
+{% block body %}
+<style>
+    .jumbocolor{
+        background-color: rgb(83,81,81); 
+    }
+</style>
+    <div align="center"><br>
+   <h1 >Home page</h1><br><br>
+    <div class="col-sm-9 ">
+        {% for post in posts %}
+                <div class="jumbotron jumbotron-fluid jumbocolor" >
+                    <div class="container" >
+                        <h1 class="display-0">{{post.title}}</h1>
+                        <p class="lead">{{post.desc}}</p>
+                    </div>
+                </div>
+        {% endfor %}
+    </div>
+</div>
+{%endblock body %}

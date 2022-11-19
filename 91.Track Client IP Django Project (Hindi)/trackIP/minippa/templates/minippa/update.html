@@ -1,0 +1,18 @@
+{% extends 'minippa/base.html' %}
+
+{% block body%}
+{% load static %}<br><br>
+
+<div class="col-sm-10" >
+<h1 align="center" class="my-5">Dasheboard/Add Post</h1>
+<form action="" method="POST" align="center" novalidate>
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Update" class="btn btn-success" >
+    <a href="{% url 'profile' %}" class="btn btn-danger"> Cancel</a>
+    
+</form>
+
+</div>    
+
+{% endblock body %}
